@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Gerenciador de Animais</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Sistema web para gerenciar seus animais">
+  <meta name="keywords" content="Gerenciamento, Animais">
+  <meta name="author" content="Leticia de Lima Batista">
+  <link rel="icon" type="image/png" href="icone.png" />
+  <link href="estilo.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"></button>
+        <img class="navbar-brand" href="#" src="icone.png" />
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="link"><a href="index.html" target="_self" title="Voltar para a página inicial" class="glyphicon glyphicon-home"></a></li>
+          <li class="link"><a href="contatos.php" target="_self" title="Entre em contato conosco!" class="glyphicon glyphicon-earphone"></a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user" title="Login"></span></a>
+            <ul class="dropdown-menu">
+              <li class="link"><a href="login.php" target="_self" title="Entrar">Entrar</a></li>
+              <li class="link"><a href="register.php" target="_self" title="Criar Conta">Criar Conta</a></li>
+              <li class="link"><a href="profile.php" target="_self" title="Perfil">Perfil</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-option-vertical" title="Menu"></span></a>
+            <ul class="dropdown-menu">
+              <li class="link"><a href="atendimentos.php" target="_self" title="Atendimentos">Atendimentos</a></li>
+              <li class="link"><a href="clientes.php" target="_self" title="Cliente">Clientes</a></li>
+              <li class="link"><a href="funcionarios.php" target="_self" title="Funcionarios">Funcionários</a></li>
+              <li class="link"><a href="animais.php" target="_self" title="Animais">Animais</a></li>
+              <li class="link"><a href="especies.php" target="_self" title="Especies">Espécies</a></li>
+              <li class="link"><a href="racas.php" target="_self" title="Raça">Raças</a></li>
+              <li class="link"><a href="consultas.php" target="_self" title="Consultas">Consultas</a></li>
+              <li class="link"><a href="vacinas.php" target="_self" title="Vacinas">Vacinas</a></li>
+              <li class="link"><a href="medicamentos.php" target="_self" title="Medicamentos">Medicamentos</a></li>
+              <li class="link"><a href="exames.php" target="_self" title="Exames">Exames</a></li>
+              <li class="link"><a href="banhos_tosas.php" target="_self" title="Banho e Tosa">Banho e Tosa</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br><br>
+  <!-- Fim do menu -->
+
+  <style>
+    form {
+      margin: 0 auto;
+      width: 800px;
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+    }
+  </style>
+
+  <!-- Titulo -->
+  <div id="fundo_titulo" class="jumbotron text-center">
+    <h1 id="titulo">Gerenciador de Informações de Animais</h1>
+    <p id="sub_titulo">Um software para gerenciar as informações de sua empresa!</p>
+  </div>
+
+  <!-- Serviços -->
+  <div class="container-fluid text-center">
+    <h2 id="topico">SERVIÇOS</h2>
+    <h4>veja um pouco sobre nossos serviços</h4>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Clientes</h4>
+        <p>Gerencie os clientes</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Funcionários</h4>
+        <p>Gerencie os funcionários</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Animais</h4>
+        <p>Gerencie os animais</p>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Consultas</h4>
+        <p>Gerencie as consultas</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Vacinas</h4>
+        <p>Gerencie as vacinas</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Medicamentos</h4>
+        <p>Gerencie os medicamentos</p>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Exames</h4>
+        <p>Gerencie os exames</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Banho e Tosa</h4>
+        <p>Gerencie os banhos e tosas</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart"></span>
+        <h4>Dicas</h4>
+        <p>Veja dicas de cuidados para o animal</p>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br>
+  <img src="patinhas.png" class="img-fluid" alt="Imagem responsiva">>
+  <br><br><br><br>
+
+  <!-- Dicas -->
+  <h2 class="container-fluid text-center" id="topico">DICAS DE CUIDADOS PARA O ANIMAL</h2>
+  <br>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="9"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4><span style="font-style:normal;"><br><br>Mantenha a higiene dos animais em dia!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Faça passeios regularmente com os animais!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Disponibilize brnquedos que o cão e ou o gato gostem!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Diedique um momento do dia para interagir com o animal!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Organize objetos e itens da casa de acordo com a idade do
+            pet!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Ofereça uma alimentação balanceada e de qualidade!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Consulte periodicamente o veterinário!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Fique de olho no cuidado com animais durante o inverno e o
+            verão!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Promova adaptações de segurança na sua casa!</span></h4>
+      </div>
+      <div class="item">
+        <h4><span style="font-style:normal;"><br><br>Mantenha em dia a documentação do seu pet!</span></h4>
+      </div>
+    </div>
+    <br><br><br>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Voltar</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
+
+  <br><br>
+
+  <!-- Contato -->
+  <div class="text-center">
+    <h2>Entre em contato conosco:</h2>
+  </div>
+
+  <form method="POST" action="contato.php">
+    <p>
+      <label>Nome:</label>
+      <input type="text" name="nome" class="form-control" />
+    </p>
+    <p>
+      <label>Email:</label>
+      <input type="text" name="email" class="form-control" />
+    </p>
+    <p>
+      <label>Mensagem:</label>
+      <textarea class="form-control" rows="6" cols="40" name="mensagem"></textarea>
+    </p>
+    <input type="hidden" name="operacao" value="incluir">
+    <button type="submit" class="btn btn-secondary btn-block">Enviar</button>
+  </form><br>
+
+  <footer>
+    <br><br><br><br>
+  </footer>
+</body>
